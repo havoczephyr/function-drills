@@ -5,6 +5,12 @@
 */
 
 //CODE HERE
+console.log("---Problem 1---")
+function helloWorld(){
+  console.log("Hello, World!")
+}
+
+helloWorld()
 
 
 ////////////////// PROBLEM 2 ////////////////////
@@ -15,6 +21,15 @@
 */
 
 //CODE HERE
+console.log("---Problem 2---")
+
+let myName = "Giovanni D'Amico"
+
+function printName(name) {
+  console.log (name)
+}
+
+printName(myName)
 
 
 ////////////////// PROBLEM 3 ////////////////////
@@ -29,7 +44,13 @@
 */
 
 //CODE HERE
+console.log ("---Problem 3---")
 
+function greeting (name) {
+  let theirName = name
+  console.log (`Hello, ${theirName}`)
+}
+greeting(myName)
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -40,7 +61,19 @@
 */
 
 //CODE HERE
+console.log ("---Problem 4---")
 
+let myFirstNumber = 37
+let mySecondNumber = 88
+
+function numberConverter (var1, var2) {
+let num1 = Number(var1)
+let num2 = Number(var2)
+
+let total = var1 + var2
+return total
+}
+console.log (numberConverter(myFirstNumber, mySecondNumber))
 
 ////////////////// PROBLEM 5 ////////////////////
 /*
@@ -52,7 +85,19 @@
 */
 
 //CODE HERE
+console.log ("---Problem 5---")
+let problemFiveName = "steven"
 
+function nameCheck (name) {
+  if (name == "Steven" || name == "steven") {
+    return (`What is up, ${name}?`)
+  } else if (name == "Bryan" || name == "bryan") {
+    return (`Hey, ${name}`)
+  } else {
+    return (`Cool name, ${name}!`)
+  }
+}
+console.log(nameCheck(problemFiveName))
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -65,8 +110,20 @@
 */
 
 //CODE HERE
+console.log("---Problem 6---")
+let problemSixColor = "blue"
 
+function faveColorFinder(color){
+  if (color == "red") {
+    return (`${color} is a great color!`)
+  } else if (color == "green") {
+    return (`${color} is a solid favorite color.`)
+  } else {
+    return ("You need to evaluate your favorite color choice.")
+  }
+}
 
+console.log (faveColorFinder(problemSixColor))
 ////////////////// PROBLEM 7 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 /*
@@ -76,7 +133,13 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+console.log ("---Problem 7---")
+function printAllNames(nameList) {
+  for (let i = 0; i < nameList.length; i++) {
+    console.log(nameList[i])
+  }
+}
+printAllNames(namesArr)
 
 ////////////////// PROBLEM 8 ////////////////////
 /*
@@ -87,7 +150,17 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+console.log("---Problem 8---")
+let oddNumber = 33
 
+function thatsOdd(x) {
+  if (x % 2 == 0 && x != 0 ){
+    return "Hey, that's not odd :("
+  } else {
+    return "That'sa shure is an odd number there, partner"
+  }
+}
+console.log(thatsOdd(oddNumber))
 
 ////////////////// PROBLEM 9 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -101,8 +174,23 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+console.log ("---Problem 9---")
+let arrayOfNumbers = [15, 17, 19, 22, 28, 4554, 282, 10101, 2, -1, 0, 69]
 
+function bigOrSmall(x) {
+  let answers = []
+  for (i = 0; i < x.length; i++) {
+    if (x[i] <= 100) {
+      answers.push ("small")
+    } else {
+      answers.push ("BIG")
+    }
+  }
+  let arrayEvaluator = answers
+  return arrayEvaluator
+}
 
+console.log (bigOrSmall(arrayOfNumbers))
 ////////////////// PROBLEM 10 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
@@ -112,6 +200,17 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+console.log("---Problem 10---")
+
+function theEliminator(x, y) {
+  for (i = 0; i < x.length; i++){
+    if (x[i] == y) {
+    x.splice(i, 1)
+    }
+  }
+  return x
+}
+console.log (theEliminator(contestants, loser))
 
 
 ////////////////// PROBLEM 11 ////////////////////
@@ -122,6 +221,12 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+console.log("---Problem 11---")
+function cruiseControlForCool(x){
+  let upperCase = x.toUpperCase()
+  console.log(upperCase)
+}
+cruiseControlForCool(sampleString)
 
 
 ////////////////// PROBLEM 12 ////////////////////
@@ -135,6 +240,19 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+//CODE HERE
+console.log("---Problem 12---")
+let email = "       TomatoKing@msn.com      "
+
+function emailCheck(x){
+  let checkedEmail = x.trim()
+  if (checkedEmail.includes(`@`) == true){
+    return `Email verified ${checkedEmail}`
+  } else {
+    return `Must provide a valid email address ${checkedEmail}`
+  }
+}
+console.log(emailCheck(email))
 ////////////////// PROBLEM 13 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -142,6 +260,15 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+console.log ("---Problem 13---")
+let budget = 6
+const chocolateFrogCost = 3
+
+function chocolateFrogShop(x) {
+let totalFrogs = Math.floor(x / chocolateFrogCost)
+return totalFrogs
+}
+console.log (chocolateFrogShop(budget))
 
 
 ////////////////// PROBLEM 14 ////////////////////
@@ -150,6 +277,13 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+console.log ("---Problem 14---")
+
+function chocolateFrogShop2(x) {
+let totalFrogs = Math.floor(x / chocolateFrogCost)
+return totalFrogs
+}
+console.log (chocolateFrogShop2(budget))
 
 
 ////////////////// PROBLEM 15 ////////////////////
@@ -159,7 +293,18 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
+console.log ("---Problem 15---")
 
+function arrayAscent(x) {
+  let result = false
+  for (let i = 0; i < x.length - 1; i++) {
+    if (x[i + 1] > x[i] ) {
+      result = true
+    }
+  }
+  return result
+}
+console.log(arrayAscent(sampleArray))
 
 ////////////////// PROBLEM 16 ////////////////////
 
@@ -183,13 +328,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = [duck]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = [duck, rubberDuck]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = [duck, rubberDuck, sailorDuck]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = [duck, realDuck]
