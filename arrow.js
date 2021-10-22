@@ -8,10 +8,10 @@
 const exclaim = function(str) {
   return str.toUpperCase() + '!!!'
 }
-
+console.log("---Problem 1---")
 // arrow
 // declaration
-// expression
+console.log("expression")
 
 
 
@@ -25,10 +25,11 @@ const exclaim = function(str) {
 const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
-
-// arrow
+console.log("---Problem 2---")
+console.log("arrow")
 // declaration
 // expression
+const exclaimThree = str => str.toUpperCase() + '!!!'
 
 /*
   Rewrite exclaimTwo to be a single line.
@@ -49,9 +50,9 @@ const exclaimTwo = str => {
 function exclaimFour(str) {
   return str.toUpperCase() + '!!!'
 }
-
+console.log("---Problem 3---")
 // arrow
-// declaration
+console.log("declaration")
 // expression
 
 
@@ -63,6 +64,9 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+console.log("---Problem 4---")
+const jsNinja = () => "I'm a Javascript Ninja"
+console.log(jsNinja())
 
 
 
@@ -78,6 +82,16 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+console.log("---Problem 5---")
+
+const compareNums = (num1, num2) => {
+  if(num1 >=num2) {
+    return num1
+  } else {
+    return num2
+  }
+}
+  console.log(compareNums(5, 6))
 
   
 ////////// PROBLEM 6 //////////
@@ -88,9 +102,12 @@ function exclaimFour(str) {
     The function should return the string: 'MOVEIEPARAM is the best movie ever!'. 
     For example, if we passed in 'Sharknado', 
     we would expect the function to return 'Sharknado is the best movie ever!'
-
     Brownie points for using a template string (again don't spend too much time figuring
     that out)
 */
 
 //CODE HERE
+console.log("---Problem 6---")
+
+const bestMovie = (str) => `${str} is the best movie ever!`
+console.log(bestMovie("The Mask"))
